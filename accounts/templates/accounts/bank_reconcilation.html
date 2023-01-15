@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% block  title %}Bank  Reconcilation{% endblock %}
+{% load static %}
+
+{% block css %}
+<link href="{% static 'assets/plugins/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet">
+{% endblock css %}
+    
+
+
+{% block content %}
+<div class="content-wrapper">
+    <div class="main-content">
+   
+        <div class="content-header">
+            <div class="page-header m-0">
+                <h4 class="page-title">Bank  Reconcilation</h4>
+                <ul class="breadcrumbs">
+                    <li class="nav-home">
+                        <a href="#">
+                            <i class="typcn typcn-home-outline"></i>
+                        </a>
+                    </li>
+                    <li class="separator">
+                        <i class="ti-angle-right"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Base</a>
+                    </li>
+                    <li class="separator">
+                        <i class="ti-angle-right"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Sub Account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="body-content">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="fs-17 fw-semi-bold mb-0">Project status</h6>
+                        </div>
+                        <div class="text-end">
+                            <div class="actions">
+                                <a href="#" class="action-item"><i class="ti-reload"></i></a>
+                                <div class="dropdown action-item">
+                                    <a href="#" class="action-item" data-bs-toggle="dropdown"><i class="ti-more-alt"></i></a>
+                                    <div class="dropdown-menu">
+                                        <a href="#" class="dropdown-item">Refresh</a>
+                                        <a href="#" class="dropdown-item">Manage Widgets</a>
+                                        <a href="#" class="dropdown-item">Settings</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- data-table start -->
+                    <div class="body-content">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table display table-bordered table-striped table-hover basic">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Age</th>
+                                                <th>Start date</th>
+                                                <th>action</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>      
+                                        
+                                            <tr>
+                                                <td>Michael Bruce</td>
+                                                <td>Javascript Developer</td>
+                                                <td>Singapore</td>
+                                                <td>29</td>
+                                                <td>2011/06/27</td>
+                                                <td>
+                                                    <button class="btn-outline-success">
+                                                        Edit
+                                                    </button>
+                                                    <button class="btn-danger">X</button>
+                                                </td>
+                                            </tr>
+                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <!-- data-table end -->
+                </div>
+            </div>
+        </div>
+        <!--/.body content-->
+</div>
+    <!--/.main content-->
+
+{% endblock  %}
+
+
+{% block js %}
+
+<!-- Third Party Scripts(used by this page)-->
+    <script src="{% static 'assets/plugins/datatables/dataTables.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/datatables/dataTables.bootstrap4.min.js' %}"></script>
+    <!--Page Active Scripts(used by this page)-->
+    <script src="{% static 'assets/plugins/datatables/data-basic.active.js' %}"></script>
+  
+
+{% endblock js %}
+
