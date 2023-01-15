@@ -25,6 +25,7 @@ class CrebitVoucherView(View):
 class ContraView(View):
     def get(self,request):
         return render(request,"accounts/contra_voucher.html")
+        
 class JournalVoucherView(View):
     def get(self,request):
         return render(request,"accounts/journal_voucher.html")

@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block css %}
-<link href="{% static 'assets/plugins/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet">
+
 {% endblock css %}
     
 
@@ -62,42 +62,886 @@
                 <div class="card-body">
                     <!-- data-table start -->
                     <div class="body-content">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table display table-bordered table-striped table-hover basic">
-                                        <thead>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>action</th>
+                        
+                           <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h6 class="fs-17 fw-semi-bold mb-0">Accounts || Predefined Accounts</h6>
+                                            </div>
+                                            <div class="text-end">
+                                                <div class="actions">
+                                                    <a href="#" class="action-item"><i class="ti-reload"></i></a>
+                                                    <div class="dropdown action-item">
+                                                        <a href="#" class="action-item" data-bs-toggle="dropdown"><i class="ti-more-alt"></i></a>
+                                                        <div class="dropdown-menu">
+                                                            <a href="#" class="dropdown-item">Refresh</a>
+                                                            <a href="#" class="dropdown-item">Manage Widgets</a>
+                                                            <a href="#" class="dropdown-item">Settings</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3 row">
+                                            <label class="col-md-6 col-form-label text-end fw-semi-bold">cash code</label>
+                                            <div class="col-md-6">
+                                                <select class="form-control basic-single" name="cash_code">
+                                                    <option value="0034">Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037">Cash In Hand</option>
+                                                    <option value="0038">Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040">Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042">Computer &amp; Tables</option>
+                                                    <option value="0043">Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047">Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056">Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                    </select>
+                                            </div>
+                                        </div>
+                                       
+                                      
+                                       <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">bank code</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control " name="bank_code">
+                                               
+                                                    <option value="0015">Account Receivable</option>
+                                                    <option value="0016">Cash</option>
+                                               
                                                 
-                                            </tr>
-                                        </thead>
-                                        <tbody>      
+                                                    <option value="0017">Bank</option>
+                                                    <option value="0018">Good Wills</option>
+                                                    <option value="0019">Property &amp; Equipment</option>
+                                                    <option value="0020">Cost of Good Soldv</option>
+                                                
+                                               
+                                                    <option value="0021">Job Expense</option>
+                                                    <option value="0022">Payroll Expense</option>
+                                                    <option value="0023">Utilities</option>
+                                                    <option value="0024">Sales Accounts</option>
+                                                    <option value="0025">Construction Income</option>
+                                                    <option value="0026">Accrued Expenses</option>
+                                                    <option value="0027">Accounts pay by name supplier</option>
+                                                    <option value="0028">Provisions</option>
+                                                    <option value="0029">Unearned Revenue</option>
+                                                
+                                               
+                                                    <option value="0030" selected>Long-Term Debt</option>
+                                                    <option value="0031">Other Long-Term Liabilities</option>
+                                                    <option value="0032">Equity Capital</option>
+                                                    <option value="0033">Retained Earnings</option>
+                                                    
+                                               
+                                                
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
                                         
-                                            <tr>
-                                                <td>Michael Bruce</td>
-                                                <td>Javascript Developer</td>
-                                                <td>Singapore</td>
-                                                <td>29</td>
-                                                <td>2011/06/27</td>
-                                                <td>
-                                                    <button class="btn-outline-success">
-                                                        Edit
-                                                    </button>
-                                                    <button class="btn-danger">X</button>
-                                                </td>
-                                            </tr>
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">advance</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control " name="advance" >
+                                               
+                                                    <option value="0015">Account Receivable</option>
+                                                    <option value="0016">Cash</option>
+                                               
+                                                
+                                                    <option value="0017">Bank</option>
+                                                    <option value="0018">Good Wills</option>
+                                                    <option value="0019">Property &amp; Equipment</option>
+                                                    <option value="0020">Cost of Good Soldv</option>
+                                                
+                                               
+                                                    <option value="0021">Job Expense</option>
+                                                    <option value="0022" selected>Payroll Expense</option>
+                                                    <option value="0023">Utilities</option>
+                                                    <option value="0024">Sales Accounts</option>
+                                                    <option value="0025">Construction Income</option>
+                                                    <option value="0026">Accrued Expenses</option>
+                                                    <option value="0027">Accounts pay by name supplier</option>
+                                                    <option value="0028">Provisions</option>
+                                                    <option value="0029">Unearned Revenue</option>
+                                                
+                                               
+                                                    <option value="0030">Long-Term Debt</option>
+                                                    <option value="0031">Other Long-Term Liabilities</option>
+                                                    <option value="0032">Equity Capital</option>
+                                                    <option value="0033">Retained Earnings</option>
+                                                    
+                                            
+
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">fixed asset</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control basic-single select2-hidden-accessible" name="fixed_asset" data-select2-id="select2-data-10-xi40" tabindex="-1" aria-hidden="true">
+                                                <optgroup label="None">
+                                                    <option value="0034" data-select2-id="select2-data-12-gg3e">Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037">Cash In Hand</option>
+                                                    <option value="0038">Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040">Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042">Computer &amp; Tables</option>
+                                                    <option value="0043">Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047">Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056">Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
+
+
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">purchase code</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control basic-single select2-hidden-accessible" name="purchase_code" data-select2-id="select2-data-13-4j3y" tabindex="-1" aria-hidden="true">
+                                                <optgroup label="None">
+                                                    <option value="0034">Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037" selected>Cash In Hand</option>
+                                                    <option value="0038">Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040">Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042">Computer &amp; Tables</option>
+                                                    <option value="0043">Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047">Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056">Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
+
+
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">sales code</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control basic-single " name="sales_code" data-select2-id="select2-data-16-2j8x" tabindex="-1" aria-hidden="true">
+                                                <optgroup label="None">
+                                                    <option value="0034">Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037">Cash In Hand</option>
+                                                    <option value="0038">Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040" selected>Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042">Computer &amp; Tables</option>
+                                                    <option value="0043">Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047">Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056">Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
+
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">customer code</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control basic-single select2-hidden-accessible" name="customer_code" data-select2-id="select2-data-19-me2z" tabindex="-1" aria-hidden="true">
+                                                <optgroup label="None">
+                                                    <option value="0034">Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037">Cash In Hand</option>
+                                                    <option value="0038">Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040">Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042" selected>Computer &amp; Tables</option>
+                                                    <option value="0043">Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047">Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056">Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                </optgroup>
+
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">supplier code</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control basic-single select2-hidden-accessible" name="supplier_code" data-select2-id="select2-data-22-o3yl" tabindex="-1" aria-hidden="true">
+                                                <optgroup label="None">
+                                                        <option value="0034">Account Receivable</option>
+                                                        <option value="0035">Employee Receivable</option>
+                                                        <option value="0036">Customer Receivable</option>
+                                                        <option value="0037">Cash In Hand</option>
+                                                        <option value="0038">Petty Cash</option>
+                                                        <option value="0039">City Bank</option>
+                                                        <option value="0040">Zenith Bank</option>
+                                                        <option value="0041">Goodwill</option>
+                                                        <option value="0042">Computer &amp; Tables</option>
+                                                        <option value="0043">Cogs</option>
+                                                        <option value="0044" selected>Salary Expense</option>
+                                                        <option value="0045">Electric bill</option>
+                                                        <option value="0046">House Rent</option>
+                                                        <option value="0047">Sales Account</option>
+                                                        <option value="0048">Abc Supplier</option>
+                                                        <option value="0049">Provision for npf contribution</option>
+                                                        <option value="0050">Provision for State Income Tax</option>
+                                                        <option value="0051">Property Sales</option>
+                                                        <option value="0052">Debts</option>
+                                                        <option value="0053">Other Long-Term Liabilities</option>
+                                                        <option value="0054">Capital Fund</option>
+                                                        <option value="0055">Current year Profit &amp; Loss</option>
+                                                        <option value="0056">Supply Receivable</option>
+                                                        <option value="0057">Accounts Payable</option>
+                                                        
+                                                    </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
+
+
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">costs_of_good_solds</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control basic-single select2-hidden-accessible" name="costs_of_good_solds" data-select2-id="select2-data-25-yw08" tabindex="-1" aria-hidden="true">
+                                                <optgroup label="None">
+                                                    <option value="0034">Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037">Cash In Hand</option>
+                                                    <option value="0038">Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040">Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042">Computer &amp; Tables</option>
+                                                    <option value="0043">Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047">Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056" selected>Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
+
+
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">vat</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control basic-single select2-hidden-accessible" name="vat" data-select2-id="select2-data-28-374e" tabindex="-1" aria-hidden="true">
+                                                <optgroup label="None">
+                                                    <option value="0034" >Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037">Cash In Hand</option>
+                                                    <option value="0038">Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040">Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042">Computer &amp; Tables</option>
+                                                    <option value="0043">Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047">Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056">Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
+
+
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">tax</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control basic-single select2-hidden-accessible" name="tax" data-select2-id="select2-data-31-i8yr" tabindex="-1" aria-hidden="true">
+                                                <optgroup label="None">
+                                                    <option value="0034" >Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037">Cash In Hand</option>
+                                                    <option value="0038">Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040">Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042">Computer &amp; Tables</option>
+                                                    <option value="0043">Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047">Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056">Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
+
+
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">inventory code</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control basic-single select2-hidden-accessible" name="inventory_code" data-select2-id="select2-data-34-rgjm" tabindex="-1" aria-hidden="true">
+                                                <optgroup label="None">
+                                                    <option value="0034" >Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037">Cash In Hand</option>
+                                                    <option value="0038">Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040">Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042">Computer &amp; Tables</option>
+                                                    <option value="0043">Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047" selected>Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056">Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
+
+
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">CPL code</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control basic-single select2-hidden-accessible" name="CPLcode" data-select2-id="select2-data-37-jfme" tabindex="-1" aria-hidden="true">
+                                                <optgroup label="None">
+                                                    <option value="0034">Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037">Cash In Hand</option>
+                                                    <option value="0038" selected>Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040">Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042">Computer &amp; Tables</option>
+                                                    <option value="0043">Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047">Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056">Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
+
+
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">LPL code</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control basic-single select2-hidden-accessible" name="LPLcode" data-select2-id="select2-data-40-dqqg" tabindex="-1" aria-hidden="true">
+                                                <optgroup label="None">
+                                                    <option value="0034" >Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037">Cash In Hand</option>
+                                                    <option value="0038">Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040">Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042">Computer &amp; Tables</option>
+                                                    <option value="0043">Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047">Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056">Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                </optgroup>
+                                                </select>
+                                               
+                                        </div>
+                                    </div>
+                                   
+
+
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">salary_code</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control basic-single select2-hidden-accessible" name="salary_code" data-select2-id="select2-data-43-kbsl" tabindex="-1" aria-hidden="true">
+                                                <optgroup label="None">
+                                                    <option value="0034" >Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037">Cash In Hand</option>
+                                                    <option value="0038">Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040">Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042">Computer &amp; Tables</option>
+                                                    <option value="0043" selected>Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047">Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056">Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
+
+
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">emp_npf_contribution</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control basic-single select2-hidden-accessible" name="emp_npf_contribution" data-select2-id="select2-data-46-8rja" tabindex="-1" aria-hidden="true">
+                                                <optgroup label="None">
+                                                    <option value="0034">Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037">Cash In Hand</option>
+                                                    <option value="0038">Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040">Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042">Computer &amp; Tables</option>
+                                                    <option value="0043">Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047">Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056">Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
+
+
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">empr_npf_contribution</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control" name="empr_npf_contribution" >
+                                                <optgroup label="None">
+                                                    <option value="0034" >Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037">Cash In Hand</option>
+                                                    <option value="0038">Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040">Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042">Computer &amp; Tables</option>
+                                                    <option value="0043">Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047">Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056">Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                </optgroup>
+                                                </select>
+                                                </div>
+                                    </div>
+                                   
+
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">emp_icf_contribution</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control basic-single select2-hidden-accessible" name="emp_icf_contribution" data-select2-id="select2-data-52-2fzr" tabindex="-1" aria-hidden="true">
+                                                <optgroup label="None">
+                                                    <option value="0034">Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037">Cash In Hand</option>
+                                                    <option value="0038">Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040">Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042">Computer &amp; Tables</option>
+                                                    <option value="0043">Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047">Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056">Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
+
+
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">empr_icf_contribution</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control basic-single select2-hidden-accessible" name="empr_icf_contribution" data-select2-id="select2-data-55-xain" tabindex="-1" aria-hidden="true">
+                                                <optgroup label="None">
+                                                    <option value="0034" >Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037">Cash In Hand</option>
+                                                    <option value="0038">Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040">Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042">Computer &amp; Tables</option>
+                                                    <option value="0043">Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047">Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056">Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
+
+
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">prov_state_tax</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control basic-single select2-hidden-accessible" name="prov_state_tax" data-select2-id="select2-data-58-rnqj" tabindex="-1" aria-hidden="true">
+                                                <optgroup label="None">
+                                                    <option value="0034">Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037">Cash In Hand</option>
+                                                    <option value="0038">Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040">Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042">Computer &amp; Tables</option>
+                                                    <option value="0043">Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047">Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056">Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
+
+
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">state_tax</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control basic-single select2-hidden-accessible" name="state_tax" data-select2-id="select2-data-61-4838" tabindex="-1" aria-hidden="true">
+                                                <optgroup label="None">
+                                                    <option value="0034">Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037">Cash In Hand</option>
+                                                    <option value="0038">Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040">Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042">Computer &amp; Tables</option>
+                                                    <option value="0043">Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047">Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056">Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
+
+
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-6 col-form-label text-end fw-semi-bold">prov_npf_code</label>
+                                        <div class="col-md-6">
+                                            <select class="form-control basic-single select2-hidden-accessible" name="prov_npf_code" data-select2-id="select2-data-64-8l0n" tabindex="-1" aria-hidden="true">
+                                                <optgroup label="None">
+                                                    <option value="0034" data-select2-id="select2-data-66-uoht">Account Receivable</option>
+                                                    <option value="0035">Employee Receivable</option>
+                                                    <option value="0036">Customer Receivable</option>
+                                                    <option value="0037">Cash In Hand</option>
+                                                    <option value="0038">Petty Cash</option>
+                                                    <option value="0039">City Bank</option>
+                                                    <option value="0040">Zenith Bank</option>
+                                                    <option value="0041">Goodwill</option>
+                                                    <option value="0042">Computer &amp; Tables</option>
+                                                    <option value="0043">Cogs</option>
+                                                    <option value="0044">Salary Expense</option>
+                                                    <option value="0045">Electric bill</option>
+                                                    <option value="0046">House Rent</option>
+                                                    <option value="0047">Sales Account</option>
+                                                    <option value="0048">Abc Supplier</option>
+                                                    <option value="0049">Provision for npf contribution</option>
+                                                    <option value="0050">Provision for State Income Tax</option>
+                                                    <option value="0051">Property Sales</option>
+                                                    <option value="0052">Debts</option>
+                                                    <option value="0053">Other Long-Term Liabilities</option>
+                                                    <option value="0054">Capital Fund</option>
+                                                    <option value="0055">Current year Profit &amp; Loss</option>
+                                                    <option value="0056">Supply Receivable</option>
+                                                    <option value="0057">Accounts Payable</option>
+                                                    
+                                                </optgroup>
+                                                </select>
+                                        </div>
+                                    </div>
+                                   
+                            
+                                            <style>
+                                                #button1 {
+                                                    background-color: white; 
+                                                    color: black; 
+                                                    border: 2px solid #4CAF50;
+                                                  }
+                                                  
+                                                  #button1:hover {
+                                                    background-color: #4CAF50;
+                                                    color: white;
+                                                  }
+                                            </style>
                                            
-                                        </tbody>
-                                    </table>
+
+                                                <div class="mt-4" style="margin-left:580px;">
+                                                    <input type="submit" id="add_receive" class="btn btn-success btn-large" name="save" value="Submit" style="margin-left: 180px;" tabindex="9">
+                                                    
+                                                 
+                                                </div>
+                                           
+                              
+
+                                    </div>
                                 </div>
                             </div>
-                        </div> 
+                           </div>
+                         
                     </div>
                     <!-- data-table end -->
                 </div>
@@ -113,11 +957,7 @@
 {% block js %}
 
 <!-- Third Party Scripts(used by this page)-->
-    <script src="{% static 'assets/plugins/datatables/dataTables.min.js' %}"></script>
-    <script src="{% static 'assets/plugins/datatables/dataTables.bootstrap4.min.js' %}"></script>
-    <!--Page Active Scripts(used by this page)-->
-    <script src="{% static 'assets/plugins/datatables/data-basic.active.js' %}"></script>
-  
+    
 
 {% endblock js %}
 
