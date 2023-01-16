@@ -5,7 +5,9 @@ from django.views import View
 class FinancialYearView(View):
     def get(self,request):
         return render(request,"accounts/financial_year.html")
-
+class ChartOfAccountView(View):
+    def get(self,request):
+        return render(request,"accounts/chart_of_account.html")
 class SubAccountView(View):
     def get(self,request):
         return render(request,"accounts/sub_account.html")

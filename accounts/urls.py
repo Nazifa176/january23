@@ -13,5 +13,6 @@ urlpatterns=[
     path("contra-voucher/",ContraView.as_view(),name="contra-voucher"),
     path("opening-balance/",OpeningBalanceView.as_view(),name="opening-balance"),
     path("journal-voucher/",JournalVoucherView.as_view(),name="journal-voucher"),
+    path("chart-of-accounts/",ChartOfAccountView.as_view(),name="chart-of-account"),
     path("bank-reconcilation/",BankReconcilationView.as_view(),name="bank-reconcilation"),
 ]
