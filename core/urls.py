@@ -10,4 +10,5 @@ urlpatterns = [
     path("dashboard/order/",include("orders.urls" ,namespace="orders")),  
     path("dashboard/vendors/",include("vendors.urls",namespace="vendors")),
     path("dashboard/products/",include("products.urls",namespace="products")),
+    path("dashboard/sales/",include("sales.urls",namespace="sales")),
 ]
